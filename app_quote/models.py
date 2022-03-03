@@ -1,5 +1,4 @@
 from django.db import models
-from picklefield.fields import PickledObjectField
 
 
 class Quote(models.Model):
@@ -11,4 +10,5 @@ class Quote(models.Model):
     longest_word = models.CharField(max_length=100, null=True, blank=True)
     repeated_char = models.TextField(null=True, blank=True)
     objects = models.Manager()
+
 

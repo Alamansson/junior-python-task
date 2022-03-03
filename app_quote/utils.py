@@ -38,9 +38,12 @@ def average_length(quote: str) -> float:
 def longest_word(quote: str) -> list:
     longest_words = []
     quotes = quote.split()
-    for i in range(3):
-        longest = quotes.pop(quotes.index(max(quotes, key=len)))
-        longest_words.append(longest)
+    if len(quotes) > 3:
+        for i in range(3):
+            longest = quotes.pop(quotes.index(max(quotes, key=len)))
+            longest_words.append(longest)
+    else:
+        return quotes
     return longest_words
 
 
