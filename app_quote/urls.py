@@ -4,7 +4,7 @@ from .views import QuoteViewSet
 
 
 router = DefaultRouter()
-router.register('kanye-sayings', QuoteViewSet)
+router.register('kanye-sayings', QuoteViewSet, basename='Quote')
 
 urlpatterns = [
     path('', include(router.urls))
