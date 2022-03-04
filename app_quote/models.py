@@ -3,12 +3,12 @@ from django.db import models
 
 class Quote(models.Model):
     quote = models.TextField(null=True)
-    character = models.IntegerField(null=True, blank=True)
-    consonant = models.IntegerField(null=True, blank=True)
-    vowel = models.IntegerField(null=True, blank=True)
-    average_lens = models.FloatField(null=True, blank=True)
-    longest_word = models.CharField(max_length=100, null=True, blank=True)
-    repeated_char = models.TextField(null=True, blank=True)
+    character = models.IntegerField()
+    consonant = models.IntegerField()
+    vowel = models.IntegerField()
+    average_lens = models.FloatField()
+    longest_word = models.CharField(max_length=100)
+    repeated_char = models.TextField()
     objects = models.Manager()
 
 
